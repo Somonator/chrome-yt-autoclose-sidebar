@@ -1,0 +1,21 @@
+{
+    "name": "YouTube autoclose sidebar",
+    "description": "Autoclose left sidebar on YouTube",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [{
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["src/js/yt_page.js"]
+    }]
+}
