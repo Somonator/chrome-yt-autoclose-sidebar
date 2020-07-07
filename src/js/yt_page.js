@@ -1,10 +1,12 @@
 // Close sidebar with help click
 function close_sidebar() {
-    let trigger = document.getElementById('guide-button');
-    let sidebar = document.getElementById('guide');
+    let trigger = document.getElementById('guide-button'),
+        sidebar = document.getElementById('guide');
 
-    if (sidebar.hasAttribute('opened')) {
-        trigger.click();
+    if (trigger && sidebar) {
+        if (sidebar.hasAttribute('opened')) {
+            trigger.click();
+        }        
     }
 }
 
